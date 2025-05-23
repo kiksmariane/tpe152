@@ -1,0 +1,132 @@
+/* Reset et styles de base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:  Arial, sans-serif
+}
+body {
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #2c3e50;
+    line-height: 1.6;
+}
+/* Conteneur principal du formulaire */
+.form-container {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.8);
+    width: 100%;
+    max-width: 580px;
+    transition: transform 0.3s ease;
+}
+.form-container:hover {
+    transform: translateY(-2px);
+}
+/* Titre principal */
+h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.2rem;
+    color: #2c3e50;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+     background: #3498db;
+}
+/* Groupes de champs */
+.form-group {
+    margin-bottom: 1.8rem;
+}
+label {
+    display: block;
+    margin-bottom: 0.6rem;
+    font-weight: 600;
+    color: #34495e;
+    font-size: 0.9rem;
+}
+/* Styles communs pour les inputs */
+input:not([type="radio"]):not([type="checkbox"]),
+select,
+textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid #e0e3e6;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    background: #f8fafc;
+}
+input:focus,
+select:focus {
+    border-color: #3498db;
+    background: #ffffff;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+/* Groupe Nom/Prénom */
+.name-group {
+    display: flex;
+    gap: 1.2rem;
+}
+.input-group {
+    flex: 1;
+    position: relative;
+}
+/* Champ Date de naissance */
+input[type ="date"] {
+    appearance: none;
+    background: url();
+}
+ input[type="tel"] {
+    letter-spacing: 0.1rem;
+ }
+.radio-group {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 0.5rem;
+}
+.radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.checkbox-group {
+    display: flex;
+    align-items: center;
+}
+.checkbox-group label {
+    margin: 0;
+}
+.submit-btn {
+    background: #3498db;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 6px;
+    width: 100%;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+.submit-btn:hover {
+    background: #2980b9;
+}
+/*Responsive Design */
+@media(max-width: 480px){
+    .name-group {
+        flex-direction: column;
+    }
+}
